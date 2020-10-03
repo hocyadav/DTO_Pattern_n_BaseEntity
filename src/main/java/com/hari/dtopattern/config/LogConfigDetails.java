@@ -13,6 +13,7 @@ import lombok.ToString;
 /**
  * @author HariomYadav
  * @since 03/10/20
+ * https://www.baeldung.com/spring-yaml-inject-map
  */
 @Getter
 @Setter
