@@ -1,0 +1,75 @@
+ymlkey1:
+  #map : variable name = application, values = K-V map
+  application:
+    name: InjectMapFromYAML
+    url: http://injectmapfromyaml.dev
+    description: How To Inject a map from a YAML File in Spring Boot
+  #map : variable name = config, value List of type string
+  config:
+    #list : variable name = ips, values = 10....
+    ips:
+      - 10.10.10.10
+      - 10.10.10.11
+      - 10.10.10.12
+      - 10.10.10.13
+    filesystem:
+      - /dev/root
+      - /dev/md2
+      - /dev/md4
+  users:
+    #Object : un, pass
+    root:
+      username: root
+      password: rootpass
+    guest:
+      username: guest
+      password: guestpass
+
+  #Key + Object
+  all_users_config:
+    #key
+    default:
+      #Object
+      logType:
+        - critical
+        - info
+      logFrequency : 10
+      logDurationInSec : 100
+      logWaitTimeInSec : 100
+    user1:
+      logType:
+        - info
+      logFrequency : 10
+      logDurationInSec : 100
+      logWaitTimeInSec : 100
+
+  logConfig:
+    logFrequency: 10
+    logDurationInSec: 100
+    logWaitTimeInSec: 100
+
+  all_users_config_2:
+    user2:
+      logType:
+        - critical
+        - info
+    user3:
+      logType:
+        - info
+        - blocker
+
+log:
+  logConfig:
+    logFrequency: 10
+    logDurationInSec: 100
+    logWaitTimeInSec: 200
+  userConfig:
+    user-1:
+      name: Hariom Yadav
+      logTypes:
+        - info
+        - blocker
+    user-2:
+      logTypes:
+        - critical
+        - warn

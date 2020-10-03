@@ -1,0 +1,5 @@
+log:
+  logConfig2:
+    logFrequency: 10
+    logDurationInSec: 100
+    logWaitTimeInSec: 200
